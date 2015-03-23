@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Find a Job Today</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="/app/app.js"></script>
+    </head>
+    <body>
+        
+        <div id="headerWrapper" ng-controller="testCtrl">
+            <span class="logo pull-left">Job</span>
+            <span class="tagline pull-left">Find</span>
+            <div class="row">
+	            <div class="col-sm-4" ng-repeat="job in jobs">
+					<div class="row">
+						<div class="col-xs-6">
+							<h1>{{job.title}}</h1>
+						</div>
+						<div class="col-xs-6">
+							<h1>{{job.description}}</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+		
+		<div ng-view class="container"></div>
+		
+    </body>
+</html>
