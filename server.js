@@ -15,5 +15,5 @@ app.get('*', function (req, res) {
 exports.index = function(req, res){
 res.render('/index', { title: 'ejs' });};
 
-app.listen(3000);
+app.listen(3007);
 
